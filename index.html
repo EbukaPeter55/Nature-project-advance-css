@@ -13,25 +13,30 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
+        <!-- Using the BEM way of orgainising classes, header is a Block cause it can standalone outside
+        this navbar-->
         <header class="header">
-            <div class="logo-box">
-                <img src="img/logo-white.png" alt="Logo" class="logo">
+            <!-- We add header__ to logo-box cause logo-box is an element in BEM -->
+            <div class="header__logo-box">
+                <img src="img/logo-white.png" alt="Logo" class="header__logo">
             </div>
 
-            <div class="text-box">
+            <div class="header__text-box">
+                <!-- Using BEM, h1 can stand alone, so it is a block -->
                 <h1 class="heading-primary">
-                    <span class="heading-primary-main">
+                    <!-- in BEM heading-primary-main is a modifier of heading-primary class, so we
+                    add "--" -->
+                    <span class="heading-primary--main">
                         Outdoors
                     </span>
-                    <span class="heading-primary-sub">
+                    <span class="heading-primary--sub">
                         is where life happens
                     </span>
                 </h1>
-
-                <a href="#" class="btn btn-white btn-animated">Discover our tours</a>
-            </div>
-            
-        </header>
-        
+                <!-- Using BEM, a btn is a standalone component. while btn-white and btn-animated
+                are btn modifiers, so we add a double hyphen(--) -->
+                <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+            </div>            
+        </header>        
     </body>
 </html>
